@@ -6,39 +6,49 @@
   <title>Chevrolet Chevy Care</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/indexStyles.css">
+  <link rel="icon" href="./img/chevy.png" type="image/png">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Chevy Care</a>
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <a class="navbar-brand" href="#">
+      <img src="./img/chevy.png" alt="Chevy Care" class="logo-rounded">
+  </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link custom-link" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
+          <a class="nav-link custom-link" href="servicios.html">Servicios</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="consejos.html">Consejos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sobre.html">Sobre Nosotros</a>
+          <a class="nav-link custom-link" href="calculadora.html">Presupuesto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="turnos.html">Turnos</a>
+          <a class="nav-link custom-link" href="turnos.html">Turnos</a>
         </li>
+         <!--
         <li class="nav-item">
-          <a class="nav-link" href="consejos.html">Consejos</a>
-        </li>
+          <a class="nav-link custom-link" href="galeria.html">Galería</a>
+        </li>        
         <li class="nav-item">
-          <a class="nav-link" href="galeria.html">Galería</a>
+          <a class="nav-link custom-link" href="preguntas.html">Preguntas Frecuentes</a>
         </li>
+        -->        
         <li class="nav-item">
-          <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+          <a class="nav-link custom-link" href="sobre.html">Sobre Nosotros</a>
         </li>
+        
       </ul>
     </div>
   </nav>
@@ -89,9 +99,109 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-
-
-  <!-- Sección de Servicios destacados -->
+  <section aria-labelledby="section-title" aria-describedby="section-description">
+    <div class="container-fluid mt-4 px-0 ">
+      <div class="card mb-3 shadow card-Taller">
+        <div class="row no-gutters mx-4 card-Taller">
+          <!-- Información en el lado izquierdo -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="card-body pl-16">
+              <header>
+                <h5 id="section-title" class="custom-title card-title text-center font-weight-bold">
+                  Bienvenido a Chevy Custom Garage
+                </h5>
+              </header>
+              <p id="section-description" class="card-text">
+                Desde 1978, Chevy Custom Garage se ha consolidado como el taller especializado en la restauración y mantenimiento del Chevrolet Chevy. 
+                Nacido del entusiasmo de un grupo de amigos, nuestro taller se ha transformado en un referente para coleccionistas y apasionados de este icónico auto. 
+                Hoy, seguimos comprometidos con la calidad y dedicación, ofreciendo un servicio integral que combina tradición, excelencia y un profundo respeto por el legado del Chevy. 
+                Únete a nuestra comunidad y mantén tu Chevy en su mejor estado.
+              </p>
+            </div>
+          </div>
+          <!-- Imagen en el lado derecho -->
+          <div class="col-md-4">
+            <img 
+              src="./img/taller.jpg" 
+              alt="Vista del taller especializado en restauración de autos Chevrolet Chevy" 
+              class="img-fluid rounded-end h-100" 
+              style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-labelledby="history-title" aria-describedby="history-description">
+    <div class="container-fluid mt-4 px-0">
+      <div class="card mb-3 shadow card-Taller">
+        <div class="row no-gutters mx-4 card-history card-Taller">
+          <!-- Información en el lado izquierdo -->
+          <div class="col-md-8 d-flex align-items-center">
+            <div class="card-body pl-16">
+              <header>
+                <h5 id="history-title" class="custom-title card-title text-center font-weight-bold">
+                  Hablemos un poco de historia
+                </h5>
+              </header>
+              <p id="history-description" class="card-text">
+                El Chevrolet Chevy es un modelo emblemático que marcó una era en la industria automotriz. 
+                Lanzado en los años 70, este vehículo rápidamente se convirtió en un símbolo de estilo, 
+                rendimiento y durabilidad. Con un diseño que combina elegancia clásica y funcionalidad moderna, 
+                el Chevy ha sido parte de innumerables historias familiares y personales. 
+                En Chevy Custom Garage, honramos este legado al preservar la esencia de cada vehículo que restauramos.
+              </p>
+            </div>
+          </div>
+          <!-- Imagen en el lado derecho -->
+          <div class="col-md-4">
+            <img 
+              src="./img/historia.jpg" 
+              alt="Imagen histórica del Chevrolet Chevy en su época dorada" 
+              class="img-fluid rounded-end h-100" 
+              style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section aria-labelledby="location-title" aria-describedby="location-description">
+    <div class="container-fluid mt-4 px-0">
+      <div class="card mb-3 shadow card-Taller">
+        
+          <h5 id="location-title" class="custom-title card-title text-center font-weight-bold mb-2 mt-2">
+            Donde encontrarnos
+          </h5>
+        <div class="row no-gutters mx-4">
+          <!-- Información central con el mapa -->
+          <div class="col-md-8">
+            <div class="embed-responsive embed-responsive-16by9 custom-map-container">
+              <iframe 
+                class="embed-responsive-item custom-map-frame" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.618891053319!2d-58.3780197!3d-34.609875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac22c285b71%3A0x5c37bb6f1a6326c8!2sLima%20757%2C%20C1073%20CABA%2C%20Argentina!5e0!3m2!1ses!2sar!4v1699880042515!5m2!1ses!2sar" 
+                title="Ubicación de Chevy Custom Garage en Google Maps"
+                aria-label="Mapa interactivo mostrando la ubicación en Lima 757, Ciudad Autónoma de Buenos Aires"
+                allowfullscreen=""
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+          <!-- Información en el lado derecho -->
+          
+          <div class="col-md-4 d-flex align-items-center card-Taller">
+            
+            <div class="card-body">             
+              <p id="location-description" class="card-text  text-left">
+                <strong>Dirección:</strong> Lima 757, C1073 Ciudad Autónoma de Buenos Aires<br>
+                <strong>Horarios de atención:</strong> Lunes a Viernes de 9 a 18 horas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- Sección de Servicios destacados 
   <div class="container mt-5">
     <h2 class="text-center">Nuestros Servicios</h2>
     <div class="row mt-4">
@@ -127,15 +237,47 @@
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
+-->
+  <!-- Footer 
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p>&copy; 2024 Chevrolet Chevy Care - Todos los derechos reservados</p>
   </footer>
+-->
+
+<footer class="py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5  mb-3">
+      <form>
+        <h6>Suscribíte a nuestro canal de noticias.</h6>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Dirección de Email</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Dirección de Email">
+          <button class="btn my-custom-btn" type="button">Subscribíte</button>
+        </div>
+      </form>
+    </div>
+</div>
+<div class="footer-content ">
+    <div style="width: 7%;"></div>
+    <div class="text-footer">
+        <div class="divide">
+            <p><strong>Materia:</strong> Diseño y Desarrollo Web</p>
+            <p><strong>Curso:</strong> 2do Cuatrimestre</p>
+            <p><strong>Grupo:</strong> 06</p>
+        </div>
+        <!-- <div class="border"></div> -->
+        <p>© Todos los derechos reservados - Sitio desarrollado para uso educativo - 2024</p>
+    </div>
+    <img src="./img/uade.jpeg" alt="" class="footer-image">
+</div>
+
+</footer>
 
   <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
