@@ -13,45 +13,39 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-    <a class="navbar-brand" href="#">
-      <img src="./img/chevy.png" alt="Chevy Care" class="logo-rounded">
-  </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="index.html">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="servicios.html">Servicios</a>
-        </li>       
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="consejos.html">Consejos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="calculadora.html">Presupuesto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="turnos.html">Turnos</a>
-        </li>
-         <!--
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="galeria.html">Galería</a>
-        </li>        
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="preguntas.html">Preguntas Frecuentes</a>
-        </li>
-        -->        
-        <li class="nav-item">
-          <a class="nav-link custom-link" href="sobre.html">Sobre Nosotros</a>
-        </li>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/chevy.png" alt="Logo" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item" >
+                <a class="nav-link custom-link active" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" href="servicios.html">Servicios</a>
+              </li>       
+              <li class="nav-item">
+                <a class="nav-link custom-link" href="consejos.html">Consejos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" href="calculadora.html">Presupuesto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" href="turnos.html">Turnos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-link" href="sobre.html">Sobre Nosotros</a>
+              </li>
+            </ul>
+        </div>
         
-      </ul>
     </div>
-  </nav>
+</nav>
 
   <!-- Carrusel de imágenes -->
   <div id="chevyCarousel" class="carousel slide" data-ride="carousel" >
@@ -61,7 +55,8 @@
       <li data-target="#chevyCarousel" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      
+      <div class="carousel-item active" >
         <img src="img/chevy4.jpg" class="d-block w-100" alt="Chevy 1" >
         <div class="carousel-caption d-none d-md-block">
           <h5>Mantenimiento de tu Chevy</h5>
@@ -165,8 +160,8 @@
     </div>
   </section>
   <section aria-labelledby="location-title" aria-describedby="location-description">
-    <div class="container-fluid mt-4 px-0">
-      <div class="card mb-3 shadow card-Taller">
+    <div class="container-fluid mt-4 px-0" >
+      <div class="card mb-3 shadow card-Taller" id="location">
         
           <h5 id="location-title" class="custom-title card-title text-center font-weight-bold mb-2 mt-2">
             Donde encontrarnos
@@ -201,48 +196,6 @@
     </div>
   </section>
   </div>
-  <!-- Sección de Servicios destacados 
-  <div class="container mt-5">
-    <h2 class="text-center">Nuestros Servicios</h2>
-    <div class="row mt-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/service1.jpg" class="card-img-top" alt="Mantenimiento General">
-          <div class="card-body">
-            <h5 class="card-title">Mantenimiento General</h5>
-            <p class="card-text">Servicio completo de mantenimiento para asegurar el rendimiento de tu Chevy.</p>
-            <a href="servicios.html" class="btn btn-primary">Más Información</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/service2.jpg" class="card-img-top" alt="Reparaciones Especializadas">
-          <div class="card-body">
-            <h5 class="card-title">Reparaciones Especializadas</h5>
-            <p class="card-text">Expertos en diagnóstico y reparación de sistemas complejos de vehículos.</p>
-            <a href="servicios.html" class="btn btn-primary">Más Información</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="img/service3.jpg" class="card-img-top" alt="Proyectos de Restauración">
-          <div class="card-body">
-            <h5 class="card-title">Proyectos de Restauración</h5>
-            <p class="card-text">Proyectos personalizados de restauración para preservar tu Chevy clásico.</p>
-            <a href="servicios.html" class="btn btn-primary">Más Información</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-  <!-- Footer 
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2024 Chevrolet Chevy Care - Todos los derechos reservados</p>
-  </footer>
--->
 
 <footer class="py-5">
   <div class="row justify-content-center">
@@ -280,4 +233,3 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
