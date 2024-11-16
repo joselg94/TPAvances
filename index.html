@@ -39,7 +39,7 @@
                 <a class="nav-link custom-link" href="turnos.html">Turnos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link custom-link" href="sobre.html">Sobre Nosotros</a>
+                <a class="nav-link custom-link" href="sobre.html">Nosotros</a>
               </li>
             </ul>
         </div>
@@ -126,49 +126,44 @@
       </div>
     </div>
   </section>
+  <div class="divide-space"></div>
   <section aria-labelledby="history-title" aria-describedby="history-description">
     <div class="container-fluid mt-4 px-0">
-      <div class="card mb-3 shadow card-Taller">
-        <div class="row no-gutters mx-4 card-history card-Taller">
-          <!-- Información en el lado izquierdo -->
-          <div class="col-md-8 d-flex align-items-center">
-            <div class="card-body pl-16">
-              <header>
-                <h5 id="history-title" class="custom-title card-title text-center font-weight-bold">
-                  Hablemos un poco de historia
-                </h5>
-              </header>
-              <p id="history-description" class="card-text">
-                El Chevrolet Chevy es un modelo emblemático que marcó una era en la industria automotriz. 
-                Lanzado en los años 70, este vehículo rápidamente se convirtió en un símbolo de estilo, 
-                rendimiento y durabilidad. Con un diseño que combina elegancia clásica y funcionalidad moderna, 
-                el Chevy ha sido parte de innumerables historias familiares y personales. 
-                En Chevy Custom Garage, honramos este legado al preservar la esencia de cada vehículo que restauramos.
-              </p>
-            </div>
-          </div>
-          <!-- Imagen en el lado derecho -->
-          <div class="col-md-4">
-            <img 
-              src="./img/historia.jpg" 
-              alt="Imagen histórica del Chevrolet Chevy en su época dorada" 
-              class="img-fluid rounded-end h-100" 
-              style="object-fit: cover;">
-          </div>
+      <div id="card-Taller" class="shadow card-Taller position-relative">
+        <!-- Imagen de fondo -->
+        <img 
+          src="./img/fabrica.jfif" 
+          alt="Imagen histórica del Chevrolet Chevy en su época dorada" 
+          class="img-fluid w-100 h-100 card-background">
+        <!-- Texto superpuesto -->
+        <div class="card-overlay">
+          <header>
+            <h5 id="history-title" class="custom-title card-title text-center font-weight-bold">
+              Hablemos un poco de historia
+            </h5>
+          </header>
+          <p id="history-description" class="card-text">
+            El Chevrolet Chevy es un modelo emblemático que marcó una era en la industria automotriz.
+            Lanzado en los años 70, este vehículo rápidamente se convirtió en un símbolo de estilo,
+            rendimiento y durabilidad. Con un diseño que combina elegancia clásica y funcionalidad moderna,
+            el Chevy ha sido parte de innumerables historias familiares y personales. En Chevy Custom Garage,
+            honramos este legado al preservar la esencia de cada vehículo que restauramos.
+          </p>
         </div>
       </div>
     </div>
   </section>
+  <div class="divide-space"></div>
   <section aria-labelledby="location-title" aria-describedby="location-description">
     <div class="container-fluid mt-4 px-0" >
-      <div class="card mb-3 shadow card-Taller" id="location">
+      <div class="mb-3" id="location">
         
-          <h5 id="location-title" class="custom-title card-title text-center font-weight-bold mb-2 mt-2">
+          <h5 id="location-title" class="custom-title card-title text-center font-weight-bold  mt-2">
             Donde encontrarnos
           </h5>
         <div class="row no-gutters mx-4">
           <!-- Información central con el mapa -->
-          <div class="col-md-8">
+          <div class="col-md-6">
             <div class="embed-responsive embed-responsive-16by9 custom-map-container">
               <iframe 
                 class="embed-responsive-item custom-map-frame" 
@@ -182,11 +177,11 @@
           </div>
           <!-- Información en el lado derecho -->
           
-          <div class="col-md-4 d-flex align-items-center card-Taller">
-            
+          <div class="col-md-6 d-flex align-items-center">
             <div class="card-body">             
-              <p id="location-description" class="card-text  text-left">
+              <p id="location-description" class="card-text text-left">
                 <strong>Dirección:</strong> Lima 757, C1073 Ciudad Autónoma de Buenos Aires<br>
+                <br>
                 <strong>Horarios de atención:</strong> Lunes a Viernes de 9 a 18 horas
               </p>
             </div>
@@ -195,6 +190,8 @@
       </div>
     </div>
   </section>
+  
+  
   </div>
 
 <footer class="py-5">
