@@ -217,7 +217,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 #card-Taller {
   position: relative; /* Para que los elementos dentro puedan posicionarse */
   background-color: transparent; /* Elimina el color de fondo predeterminado */
-  margin: 2rem;
+  margin: 0rem;
   border: none; /* Opcional: elimina bordes */
 }
 
@@ -306,8 +306,8 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   .text-footer p{
       text-align: center;
   }
-  .card-Taller {
-    padding: 0.5rem; /* Reduce el padding en pantallas m√°s peque√±as */
+  #card-Taller {
+    margin: 0;
   }
 
   .card-Taller img {
@@ -321,6 +321,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 
   .card-Taller h5.card-title {
     font-size: 1rem; /* Reduce el tama√±o del t√≠tulo en pantallas peque√±as */
+  }
+  #card-reverse {
+    flex-direction: column-reverse;
   }
 }
 
