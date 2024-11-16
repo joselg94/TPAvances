@@ -212,6 +212,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 #location h5 {
   margin-bottom: 2rem;
 }
+#history-description {
+  text-align: justify;
+}
 
 /*desde aca la card de la imagen con texto superpuesto */
 #card-Taller {
@@ -324,6 +327,11 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   }
   #card-reverse {
     flex-direction: column-reverse;
+  }
+  #location-description{
+    margin-left: 0;
+    margin-top:2rem;
+    text-align: center;
   }
 }
 
