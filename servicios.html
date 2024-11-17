@@ -8,6 +8,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/indexStyles.css">
+  <link rel="icon" href="./img/chevy.png" type="image/png">
 </head>
 <body>
 
@@ -23,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item" >
-                <a class="nav-link custom-link" href="index.html">Inicio</a>
+                <a class="nav-link custom-link " href="index.html">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link custom-link active" href="servicios.html">Servicios</a>
@@ -45,47 +46,164 @@
         
     </div>
 </nav>
-
-  <!-- Main content -->
+<!-- Carrusel de imágenes -->
+<div id="chevyCarousel" class="carousel slide" data-ride="carousel" >
+  <ol class="carousel-indicators">
+    <li data-target="#chevyCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#chevyCarousel" data-slide-to="1"></li>
+    <li data-target="#chevyCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active" >
+      <img src="img/chevy4.jpg" class="d-block w-100" alt="Chevy 1" >
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Mantenimiento de tu Chevy</h5>
+        <p>¡Mantén tu Chevy como nuevo con nuestros servicios especializados!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/chevy2.jpg" class="d-block w-100" alt="Chevy 2" >
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Proyectos de Restauración</h5>
+          <p>Mira nuestros proyectos recientes de restauración de Chevys clásicos.</p>
+      </div>
+  </div>
+  <div class="carousel-item">
+      <img src="img/chevy3.jpg" class="d-block w-100" alt="Chevy 3" >
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Reparaciones Expertas</h5>
+          <p>Realizamos reparaciones detalladas para preservar el valor de tu Chevy.</p>
+      </div>
+  </div>
+  <div class="carousel-item"> 
+      <img src="img/chevy5.jpg" class="d-block w-100" alt="Chevy 3" >
+      <div class="carousel-caption d-none d-md-block">
+          <h5>Reparaciones Expertas</h5>
+          <p>Realizamos reparaciones detalladas para preservar el valor de tu Chevy.</p>
+      </div>
+  </div>
+  </div>
+  <a class="carousel-control-prev" href="#chevyCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#chevyCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div class="divide-space"></div>
 <div class="container mt-5">
-  <h1 class="text-center">Nuestros Servicios</h1>
-  <div class="row mt-4">
+  <h1 class="text-center">SERVICIO DE DIAGNÓSTICO INTEGRAL</h1>
+</div>
+<section aria-labelledby="section-title" aria-describedby="section-description">
+  <div class="container-fluid mt-4 px-0 ">
+    <div class="card mb-3 shadow card-Taller">
+      <div class="row no-gutters card-Taller">
+
+        <div class="col-md-4" style="max-height:100%">
+          <img 
+            src="./img/servicio-diagnostico.jfif" 
+            alt="Vista del taller especializado en restauración de autos Chevrolet Chevy" 
+            class="img-fluid rounded-end h-100" 
+            style="object-fit: cover;">
+        </div>
+        <div class="col-md-8 d-flex align-items-center">
+          <div class="card-body pl-16">
+
+            <p id="section-description" class="card-text">
+              Nuestro diagnóstico integral detecta cualquier problema en tu Chevy mediante equipos de última tecnología, asegurando una evaluación precisa y completa para mantener tu vehículo en óptimas condiciones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="divide-space"></div>
+  <!-- Main content -->
+  <h1 class="text-center">MANTENIMIENTO</h1>
+  <div class="card-overlay">
+    <p id="history-description" class="card-text">
+      Ofrecemos mantenimiento especializado para cada aspecto de tu Chevy. Desde la tapicería hasta la pintura, garantizamos que tu auto luzca y funcione como el primer día.
+    </p>
+  </div>
+<div class="container ">
+  <div class="row mt-4 d-flex align-items-stretch">
     <!-- Card 1 -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Mantenimiento General">
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/tapiceria.jpg" alt="Mantenimiento General">
         <div class="card-body">
-          <h5 class="card-title">Mantenimiento General</h5>
-          <p class="card-text">Ofrecemos mantenimiento regular para mantener tu Chevy en óptimas condiciones.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
+          <h5 class="card-title"><strong>Tapiceria</strong></h5>
+          <p class="card-text">Renueva el interior de tu Chevy con nuestros servicios de tapicería profesional.</p>
         </div>
       </div>
     </div>
     <!-- Card 2 -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Reparaciones Especializadas">
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/pintura.jpg" alt="Reparaciones Especializadas">
         <div class="card-body">
-          <h5 class="card-title">Reparaciones Especializadas</h5>
-          <p class="card-text">Reparación de motor, transmisión y otros sistemas críticos del vehículo.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
+          <h5 class="card-title"><strong>Pintura</strong></h5>
+          <p class="card-text">Protege y mejora el aspecto de tu Chevy con tratamientos de pintura de alta calidad.</p>
         </div>
       </div>
     </div>
     <!-- Card 3 -->
-    <div class="col-md-4">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://via.placeholder.com/150" alt="Diagnósticos Técnicos">
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/service.jpg" alt="Diagnósticos Técnicos">
         <div class="card-body">
-          <h5 class="card-title">Diagnósticos Técnicos</h5>
-          <p class="card-text">Realizamos diagnósticos avanzados para detectar problemas y mantener el rendimiento.</p>
-          <a href="#" class="btn btn-primary">Más información</a>
+          <h5 class="card-title"><strong>Service</strong></h5>
+          <p class="card-text">Realiza el service completo de tu Chevy para asegurar su rendimiento y durabilidad.</p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+<div class="divide-space"></div>
+<h1 class="text-center">REPARACIONES</h1>
+  <div class="card-overlay">
+    <p id="history-description" class="card-text">
+      Nuestro equipo de expertos ofrece reparaciones integrales para cada necesidad de tu Chevy, desde mecánica hasta chapa y pintura, devolviendo su estética y funcionalidad originales.
+    </p>
+  </div>
+<div class="container end">
+  <div class="row mt-4 d-flex align-items-stretch">
+    <!-- Card 1 -->
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/reparacion-mecanica.jpg" alt="Mantenimiento General">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Mecánica general</strong></h5>
+          <p class="card-text">Soluciones rápidas y efectivas para cualquier problema mecánico de tu Chevy.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/reparacion-chapa.jpg" alt="Reparaciones Especializadas">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Chapa y pintura</strong></h5>
+          <p class="card-text">Recupera el brillo y la estética de tu Chevy con reparaciones de chapa y pintura de alta precisión.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="col-md-4 d-flex end">
+      <div class="card h-100" style="width: 100%;">
+        <img class="card-img-top image" src="./img/reparacion-tapiceria.jpg" alt="Diagnósticos Técnicos">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Tapicería</strong></h5>
+          <p class="card-text">Repara o renueva la tapicería de tu Chevy, cuidando cada detalle del interior.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="py-5">
     <div class="row justify-content-center">
@@ -117,6 +235,7 @@
   </footer>
 
   <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

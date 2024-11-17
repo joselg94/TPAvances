@@ -33,7 +33,7 @@ h2 {
 }
 
 .card:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 #section-description{
   text-align: justify;
@@ -122,6 +122,9 @@ nav .container-fluid div {
   width: 20rem;
   border-radius: 50%;
 }
+.text-center {
+  color: #003a70;
+}
 .custom-link {
 color: white; /* Letras blancas */
 transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transición */
@@ -196,6 +199,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   font-size: 0.9rem; /* Reduce el tamaño de la fuente */
   line-height: 1.4; /* Ajusta el espaciado entre líneas */
 }
+.card .card-body{
+  text-align: center;
+}
 
 .card-Taller h5.card-title {
   font-size: 1.2rem; /* Ajusta el tamaño del título */
@@ -262,6 +268,22 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   font-size: 1rem;
   line-height: 1.5;
 }
+#card-reverse {
+  border-radius: 10px;
+}
+.card-title {
+  color: #003A70;
+}
+.card .card-body{
+  background: rgb(232, 228, 228);
+  padding: 2rem;
+}
+.card .image {
+  height: 20rem;
+}
+.end {
+  margin-bottom: 2rem;
+}
 /* Ajuste adicional para imágenes más pequeñas en pantallas móviles */
 @media (max-width: 768px) {
   .carousel-item img {
@@ -314,7 +336,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   }
 
   .card-Taller img {
-    max-height: 200px; /* Reduce el tamaño de la imagen para pantallas pequeñas */
+    max-height: 300px;
   }
 
   .card-Taller .card-body {
@@ -332,6 +354,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
     margin-left: 0;
     margin-top:2rem;
     text-align: center;
+  }
+  .navbar .container-fluid {
+    padding: 0 1rem;
   }
 }
 
