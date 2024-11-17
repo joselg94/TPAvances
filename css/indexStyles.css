@@ -189,10 +189,10 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 }
 
 .card-Taller img {
-  max-height: 250px; /* Limita la altura m√°xima de la imagen */
-  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
-  object-fit: cover; /* Mantiene las proporciones de la imagen */
-  border-radius: 5px; /* Bordes redondeados para la imagen */
+  max-height: 300px; 
+  width: 100%; 
+  object-fit: cover; 
+  border-radius: 5px; 
 }
 
 .card-Taller .card-body {
@@ -268,9 +268,10 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   font-size: 1rem;
   line-height: 1.5;
 }
-#card-reverse {
+#card-reverse, #card-column {
   border-radius: 10px;
 }
+
 .card-title {
   color: #003A70;
 }
@@ -283,6 +284,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 }
 .end {
   margin-bottom: 2rem;
+}
+.left-list{
+  text-align: left;
 }
 /* Ajuste adicional para im√°genes m√°s peque√±as en pantallas m√≥viles */
 @media (max-width: 768px) {
