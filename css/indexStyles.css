@@ -1,3 +1,8 @@
+:root {
+  --font-size-large: 2rem;
+  --font-size-small: 1.1rem;
+}
+
 /* Estilos para el cuerpo */
 html, body {
   height: 100%;
@@ -37,6 +42,7 @@ h2 {
 }
 #section-description{
   text-align: justify;
+  font-size: var(--font-size-small);
 }
 
 footer {
@@ -196,7 +202,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 }
 
 .card-Taller .card-body {
-  font-size: 0.9rem; /* Reduce el tama√±o de la fuente */
+  font-size: var(--font-size-small); /* Reduce el tama√±o de la fuente */
   line-height: 1.4; /* Ajusta el espaciado entre l√≠neas */
 }
 .card .card-body{
@@ -220,6 +226,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 }
 #history-description {
   text-align: justify;
+  font-size: var(--font-size-small);
 }
 
 /*desde aca la card de la imagen con texto superpuesto */
@@ -361,6 +368,13 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   }
   .navbar .container-fluid {
     padding: 0 1rem;
+  }
+  .divide-space {
+    border-bottom: solid 10px #EFB810;
+  }
+  .left-list{
+    list-style: none;
+    text-align: center;
   }
 }
 
