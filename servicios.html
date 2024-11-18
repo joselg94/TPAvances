@@ -48,33 +48,34 @@
 </nav>
 <!-- Carrusel de imágenes -->
 <div id="chevyCarousel" class="carousel slide" data-ride="carousel" >
-  <ol class="carousel-indicators">
-    <li data-target="#chevyCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#chevyCarousel" data-slide-to="1"></li>
-    <li data-target="#chevyCarousel" data-slide-to="2"></li>
-  </ol>
   <div class="carousel-inner">
     
     <div class="carousel-item active" >
       <img src="img/carrusel-servicios1.jpg" class="d-block w-100" alt="Chevy 1" >
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Servicios de Mantenimiento</h5>
-        <!-- <p>¡Mantén tu Chevy como nuevo con nuestros servicios especializados!</p> -->
-      </div>
+      <a href="#mantenimiento">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="button-carrusel">Servicios de Mantenimiento</div>
+          <!-- <p>¡Mantén tu Chevy como nuevo con nuestros servicios especializados!</p> -->
+        </div>
+      </a>
     </div>
     <div class="carousel-item">
       <img src="img/carrusel-servicios.jpg" class="d-block w-100" alt="Chevy 2" >
-      <div class="carousel-caption d-none d-md-block">
-          <h5>Servicio de Reparación</h5>
-          <!-- <p>Mira nuestros proyectos recientes de restauración de Chevys clásicos.</p> -->
-      </div>
+      <a href="#reparacion">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="button-carrusel">Servicio de Reparación</div>
+            <!-- <p>Mira nuestros proyectos recientes de restauración de Chevys clásicos.</p> -->
+        </div>
+      </a>
   </div>
   <div class="carousel-item">
       <img src="img/carrusel-servicios2.jpg" class="d-block w-100" alt="Chevy 3" >
-      <div class="carousel-caption d-none d-md-block">
-          <h5>Servicio de Diagnóstico</h5>
-          <!-- <p>Realizamos reparaciones detalladas para preservar el valor de tu Chevy.</p> -->
-      </div>
+      <a href="#diagnostico">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="button-carrusel">Servicio de Diagnóstico</div>
+            <!-- <p>Realizamos reparaciones detalladas para preservar el valor de tu Chevy.</p> -->
+        </div>
+      </a>
   </div>
   </div>
   <a class="carousel-control-prev" href="#chevyCarousel" role="button" data-slide="prev">
@@ -86,7 +87,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div class="divide-space"></div>
+<div id="diagnostico" class="divide-space"></div>
 <!-- <div class="container mt-5">
 </div> -->
 <h1 class="text-center">SERVICIO DE DIAGNÓSTICO INTEGRAL</h1>
@@ -114,9 +115,9 @@
     </div>
   </div>
 </section>
-<div class="divide-space"></div>
+<div id="mantenimiento" class="divide-space"></div>
   <!-- Main content -->
-  <h1 class="text-center">MANTENIMIENTO</h1>
+  <h1  class="text-center">MANTENIMIENTO</h1>
   <div class="card-overlay">
     <p id="history-description" class="card-text">
       Ofrecemos mantenimiento especializado para cada aspecto de tu Chevy. Desde la tapicería hasta la pintura, garantizamos que tu auto luzca y funcione como el primer día.
@@ -156,7 +157,7 @@
     </div>
   </div>
 </div>
-<div class="divide-space"></div>
+<div id="reparacion" class="divide-space"></div>
 <h1 class="text-center">REPARACIONES</h1>
   <div class="card-overlay">
     <p id="history-description" class="card-text">
