@@ -23,7 +23,16 @@ h1, h5 {
 h2 {
   color: #007bff;
 }
-
+.button-carrusel{
+  /* color:#007bff; */
+  font-size: 1.5rem;
+  border: solid 2px #EFB810;
+  border-radius: 10px;
+  background-color: rgba(239, 184, 16, 0.5);
+}
+.carousel-caption{
+  padding: 0% 20%;
+}
 /* Estilo de las tarjetas */
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
