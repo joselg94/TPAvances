@@ -126,6 +126,24 @@ if(window.location.pathname === '/turnos.html'){
       });
 }
 
+// Mostrar el botón de scroll al inicio
+const scrollToTopBtn1 = document.getElementById('scrollToTop');
+
+// Mostrar u ocultar el botón según el scroll
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+    scrollToTopBtn1.style.display = 'block';
+  } else {
+    scrollToTopBtn1.style.display = 'none';
+  }
+});
+
+// Volver al inicio al hacer clic en el botón
+scrollToTopBtn1.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+
 
 
   
