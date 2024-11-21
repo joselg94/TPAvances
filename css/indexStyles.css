@@ -389,7 +389,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 .team-card img {
   width: 10rem;
   height: 10rem;
-  border-radius: 50%;
+  border-radius: 30%;
   object-fit: cover;
   margin-bottom: 15px;
 }
