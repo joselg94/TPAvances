@@ -3,57 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servicios - Chevrolet Chevy Care</title>
+  <title>Chevrolet Chevy Care</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/indexStyles.css">
+  <link rel="icon" href="./img/chevy.png" type="image/png">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Chevy Care</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg navbar-dark end">
+    <div class="container-fluid margen">
+      <a class="navbar-brand" href="index.html">
+        <img src="./img/chevy.png" alt="Logo" class="d-inline-block align-text-top">
+      </a>
+      <div id="navbar-toggle">
+        <div id="toggle-max" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+      </div>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" >
+          <a class="nav-link custom-link " href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
+          <a class="nav-link custom-link" href="servicios.html">Servicios</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="consejos.html">Consejos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sobre.html">Sobre Nosotros</a>
+          <a class="nav-link custom-link" href="presupuesto.html">Presupuesto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="turnos.html">Turnos</a>
+          <a class="nav-link custom-link" href="turnos.html">Turnos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="consejos.html">Consejos</a>
+          <a class="nav-link custom-link active" href="sobreNosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="galeria.html">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+          <div id="toggle-nav" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch1" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
         </li>
       </ul>
+  </div>
+</nav>
+
+<h1 class="text-center titulo">ACERCA DE NOSOTROS</h1>
+<div class="card-container-nosotros">
+  <div class="card-nosotros">
+    <header>
+      <h5 id="section-title" class="card-title">Visión</h5>
+    </header>
+    <p id="section-description" class="card-text-nosotros">
+      Ser el taller líder en restauración y mantenimiento de Chevrolet Chevy en Argentina, preservando el legado y la pasión por este auto icónico. Buscamos ser un referente para los coleccionistas y amantes de los vehículos clásicos, brindando un servicio de excelencia y creando una comunidad unida por el amor al Chevy.
+    </p>
+  </div>
+
+  <div class="card-nosotros">
+    <header>
+      <h5 id="section-title" class="card-title">Misión</h5>
+    </header>
+    <p id="section-description" class="card-text-nosotros">
+      Ofrecer servicios integrales de alta calidad para la restauración, mantenimiento y personalización del Chevrolet Chevy. Nos comprometemos a mantener la tradición de excelencia iniciada por nuestros fundadores, proporcionando a cada cliente un trato personalizado y compartiendo nuestra pasión por los autos clásicos con las nuevas generaciones.
+    </p>
+  </div>
+</div>
+  <div class="divide-space"></div>
+  <section aria-labelledby="history-title" aria-describedby="history-description">
+    <div class="container-fluid mt-4 px-0">
+      <div id="card-Taller" class="shadow card-Taller position-relative">
+        <!-- Imagen de fondo -->
+        <img 
+          src="./img/nuestro-taller.jfif" 
+          alt="Imagen histórica del Chevrolet Chevy en su época dorada" 
+          class="img-fluid w-100 h-100 card-background">
+        <!-- Texto superpuesto -->
+        <div class="card-overlay">
+          <header>
+            <h5 id="history-title" class="custom-title card-title text-center font-weight-bold">
+              Nuestro taller
+            </h5>
+          </header>
+          <p id="history-description" class="card-text">
+            Chevy Custom Garage fue fundado en 1978 en el barrio porteño de Chacarita, por un grupo de amigos apasionados por los autos Chevy. Comenzó como un espacio de encuentro para restaurar sus vehículos y compartir la pasión por los autos. La demanda de entusiastas fue tan grande que decidieron abrir un taller integral. Hoy, la segunda generación de entusiastas continúa el legado, ofreciendo servicios de restauración y mantenimiento con la misma pasión y dedicación que sus antecesores. Chevy Custom Garage es más que un taller: es un lugar donde los fanáticos encuentran experiencia y amistad para mantener sus autos en perfecto estado.
+          </p>
+        </div>
+      </div>
     </div>
-  </nav>
+  </section>
+  
+  
+  
+  </div>
+  <div class="divide-space"></div>
+  <h1 class="text-center titulo">NUESTRO EQUIPO</h1>
+  <div class="team-container">
+    <!-- Card 1 -->
+    <div class="team-card">
+      <img src="./img/foto_pablo.jpeg" alt="Pablo Tocalini">
+      <h3>Pablo Tocalini</h3>
+      <br>
+      <h4>Mecánico Especialista en Restauración de Clásicos</h4>
+      <br>
+      <p>
+        Con más de 10 años de experiencia en la restauración de autos clásicos, 
+        se especializa en la recuperación de modelos como el Chevy GT y SS.
+      </p>
+    </div>
 
-  <!-- Main content -->
+    <!-- Card 2 -->
+    <div class="team-card">
+      <img src="./img/guada.jpg" alt="Guadalupe Lanzara">
+      <h3>Guadalupe Lanzara</h3>
+      <br>
+      <h4>Jefa de Pintura y Estética Automotriz</h4>
+      <br>
+      <p>
+        Expertos en acabados y personalización de vehículos, especializado en 
+        pintura y estética. Con una atención meticulosa a los detalles.
+      </p>
+    </div>
 
+    <!-- Card 3 -->
+    <div class="team-card">
+      <img src="./img/profileImage.jpeg" alt="Jose Luis Gil Sanchez">
+      <h3>Jose Luis Gil Sanchez</h3>
+      <br>
+      <h4>Técnico en Diagnóstico y Mantenimiento</h4>
+      <br>
+      <p>
+        Experto en el uso de equipos de última tecnología para el diagnóstico integral de vehículos.
+      </p>
+    </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Chevrolet Chevy Care - Todos los derechos reservados</p>
-  </footer>
+    <!-- Card 4 -->
+    <div class="team-card">
+      <img src="./img/caro.jpeg" alt="Jokasta Perdomo">
+      <h3>Jokasta Perdomo</h3>
+      <br>
+      <h4>Coordinadora de Servicio al Cliente y Gestión de Proyectos</h4>
+      <br>
+      <p>
+        Planificación y supervisión de restauraciones completas. 
+        Asegura que cada Chevy restaurado cumpla con los estándares más altos.
+      </p>
+    </div>
+  </div>
+
+<footer class="py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5  mb-3">
+      <form>
+        <h6>Suscribíte a nuestro canal de noticias.</h6>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="newsletter1" class="visually-hidden">Dirección de Email</label>
+          <input id="newsletter1" type="text" class="form-control" placeholder="Dirección de Email">
+          <button class="btn my-custom-btn" type="button">Subscribíte</button>
+        </div>
+        <a href="https://joselg94.github.io/TPDisenoWebGrupo6/" style="text-decoration: none;"><p style="color: white;margin-top:1rem;"><strong>Visita nuestro sitio web</strong></p></a>
+      </form>
+    </div>
+</div>
+<div class="footer-content ">
+    <div style="width: 7%;"></div>
+    <div class="text-footer">
+        <div class="divide">
+            <p><strong>Materia:</strong> Diseño y Desarrollo Web</p>
+            <p><strong>Curso:</strong> 2do Cuatrimestre</p>
+            <p><strong>Grupo:</strong> 06</p>
+        </div>
+        <!-- <div class="border"></div> -->
+        <p>© Todos los derechos reservados - Sitio desarrollado para uso educativo - 2024</p>
+    </div>
+    <img src="./img/uade.jpeg" alt="" class="footer-image">
+</div>
+
+</footer>
 
   <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+
 </body>
 </html>

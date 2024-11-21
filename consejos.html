@@ -14,43 +14,54 @@
   <body>
   
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark end">
-      <div class="container-fluid margen">
-          <a class="navbar-brand" href="index.html">
-              <img src="./img/chevy.png" alt="Logo" class="d-inline-block align-text-top">
-          </a>
+  <nav class="navbar navbar-expand-lg navbar-dark end">
+    <div class="container-fluid margen">
+      <a class="navbar-brand" href="index.html">
+        <img src="./img/chevy.png" alt="Logo" class="d-inline-block align-text-top">
+      </a>
+      <div id="navbar-toggle">
+        <div id="toggle-max" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
+        
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item" >
-                  <a class="nav-link custom-link " href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link custom-link" href="servicios.html">Servicios</a>
-                </li>       
-                <li class="nav-item">
-                  <a class="nav-link custom-link active" href="consejos.html">Consejos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link custom-link" href="calculadora.html">Presupuesto</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link custom-link" href="turnos.html">Turnos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link custom-link" href="sobre.html">Nosotros</a>
-                </li>
-              </ul>
-          </div>
           
       </div>
-  </nav>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" >
+          <a class="nav-link custom-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="servicios.html">Servicios</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="consejos.html">Consejos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="presupuesto.html">Presupuesto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="turnos.html">Turnos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="sobreNosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <div id="toggle-nav" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch1" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
+        </li>
+      </ul>
+  </div>
+</nav>
 
   <!-- Main content -->
   <!-- <div class="end"> -->
-    <h1 class="text-center">CONSEJOS PARA MANTENER TU CHEVY EN PERFECTO ESTADO</h1>
+    <h1 class="text-center titulo">CONSEJOS PARA MANTENER TU CHEVY EN PERFECTO ESTADO</h1>
     <div class="card-overlay">
       <p id="history-description" class="card-text">
         Mantener tu Chevy en condiciones óptimas no solo prolonga su vida útil, sino que también preserva su valor como auto de colección. Sigue nuestros consejos prácticos para el cuidado de tapicería, motor, y chapa y pintura, y disfruta de un Chevy impecable por muchos años.
@@ -189,5 +200,6 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
