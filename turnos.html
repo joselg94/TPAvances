@@ -6,54 +6,139 @@
   <title>Servicios - Chevrolet Chevy Care</title>
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/indexStyles.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Chevy Care</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container-fluid margen">
+      <a class="navbar-brand" href="index.html">
+        <img src="./img/chevy.png" alt="Logo" class="d-inline-block align-text-top">
+      </a>
+      <div id="navbar-toggle">
+        <div id="toggle-max" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
+        
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          
+      </div>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Inicio</a>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item" >
+          <a class="nav-link custom-link " href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="servicios.html">Servicios</a>
+          <a class="nav-link custom-link" href="servicios.html">Servicios</a>
+        </li>       
+        <li class="nav-item">
+          <a class="nav-link custom-link" href="consejos.html">Consejos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sobre.html">Sobre Nosotros</a>
+          <a class="nav-link custom-link" href="presupuesto.html">Presupuesto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="turnos.html">Turnos</a>
+          <a class="nav-link custom-link active" href="turnos.html">Turnos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="consejos.html">Consejos</a>
+          <a class="nav-link custom-link" href="sobreNosotros.html">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="galeria.html">Galería</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="preguntas.html">Preguntas Frecuentes</a>
+          <div id="toggle-nav" class="form-check form-switch">
+            <input class="form-check-input " type="checkbox" id="darkModeSwitch1" checked aria-label="Switch between light and dark mode" data-bs-toggle="tooltip" data-bs-placement="top" title="Switch between light and dark mode">
+          </div>
         </li>
       </ul>
+  </div>
+</nav>
+
+  <div class="container mt-5 turno">
+    <h2 class="text-center mb-4 titulo">Agendar Turno</h2>
+    <form id="turnoForm" class=" p-4 rounded shadow-sm">
+
+      <div class="mb-3">
+        <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+        <input type="text" class="form-control" id="nombreCliente" placeholder="Escribe tu nombre" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="correoCliente" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="correoCliente" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="telefonoCliente" class="form-label">Número de Teléfono</label>
+        <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingrese su número de teléfono" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
+        <input type="date" class="form-control" id="fechaTurno" required>
+      </div>
+      <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#confirmacionModal">
+        Agendar Turno
+      </button>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Confirmación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¡Turno agendado correctamente!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
 
-  <!-- Main content -->
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Chevrolet Chevy Care - Todos los derechos reservados</p>
+  <footer class="py-5">
+    <div class="row justify-content-center">
+      <div class="col-md-5  mb-3">
+        <form>
+          <h6>Suscribíte a nuestro canal de noticias.</h6>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Dirección de Email</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Dirección de Email">
+            <button class="btn my-custom-btn" type="button">Subscribíte</button>
+          </div>
+          <a href="https://joselg94.github.io/TPDisenoWebGrupo6/" style="text-decoration: none;"><p style="color: white;margin-top:1rem;"><strong>Visita nuestro sitio web</strong></p></a>
+        </form>
+      </div>
+  </div>
+  <div class="footer-content ">
+      <div style="width: 7%;"></div>
+      <div class="text-footer">
+          <div class="divide">
+              <p><strong>Materia:</strong> Diseño y Desarrollo Web</p>
+              <p><strong>Curso:</strong> 2do Cuatrimestre</p>
+              <p><strong>Grupo:</strong> 06</p>
+          </div>
+          <!-- <div class="border"></div> -->
+          <p>© Todos los derechos reservados - Sitio desarrollado para uso educativo - 2024</p>
+      </div>
+      <img src="./img/uade.jpeg" alt="" class="footer-image">
+  </div>
+  
   </footer>
-
-  <!-- Bootstrap JS and dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
