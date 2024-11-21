@@ -1,0 +1,156 @@
+#h4-title {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+#h5-title {
+  color: #003a70;
+  font-weight: bold;
+}
+
+#h5-budget {
+  color: #003a70;
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+
+/* Tarjetas de igual altura */
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-header {
+  font-weight: bold; /* Aplica negrita */
+  border-bottom: 5px solid #efb810; /* Borde inferior amarillo */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacio entre los elementos */
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  border-radius: 0 0 var(--bs-card-inner-border-radius)
+    var(--bs-card-inner-border-radius);
+}
+
+.form-check {
+  display: flex;
+  margin-right: 15px; /* Espacio entre los elementos */
+}
+
+.form-check-label {
+  cursor: pointer; /* Cambia el cursor a una manito cuando pase sobre el label */
+}
+
+#showModalButton,
+#bookAppointment {
+  background-color: #003a70; /* Color de fondo */
+  border-color: #003a70; /* Color del borde */
+}
+
+#showModalButton:hover,
+#bookAppointment:hover {
+  background-color: #c89a0d; /* Color al pasar el ratón (más oscuro) */
+  border-color: #c89a0d;
+}
+
+/* Estilo para la lista del resumen */
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.summary-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  display: flex;
+  justify-content: space-between; /* Alinear texto e ícono */
+  align-items: center;
+}
+
+.summary-list li:last-child {
+  border-bottom: none;
+}
+
+.summary-list li:hover {
+  background-color: #e9ecef;
+}
+
+/* Títulos dentro del resumen */
+.summary h6 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: transparent; /* Fondo transparente */
+  border: none; /* Sin borde */
+  color: #dc3545; /* Rojo Bootstrap */
+  cursor: pointer; /* Mano al pasar */
+  font-size: 18px; /* Tamaño adecuado */
+  margin-left: auto; /* Empujar al extremo derecho */
+}
+
+.delete-btn:hover {
+  color: #a71d2a; /* Rojo más oscuro al pasar el cursor */
+  transform: scale(1.1); /* Pequeño zoom al pasar */
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #efb810;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 15px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+  display: none; /* Oculto inicialmente */
+}
+
+.scroll-to-top:hover {
+  background-color: #c89a0d;
+}
+
+.scroll-to-top i {
+  font-size: 20px;
+}
+
+/* @media (max-width: 767px) {
+  .card {
+    margin-bottom: 20px;
+  }
+} */
+
+@media (max-width: 768px) {
+  /* Para pantallas pequeñas */
+  #button-container {
+    display: flex;
+    flex-direction: column; /* Apilar botones */
+    align-items: center; /* Centrar los botones */
+    margin: 1rem;
+  }
+
+  #showModalButton,
+  #clearButton {
+    width: 100%; /* Botones del mismo tamaño */
+    margin-bottom: 0.8rem; /* Espacio entre botones */
+  }
+}
