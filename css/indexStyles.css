@@ -1,6 +1,33 @@
 :root {
   --font-size-large: 2rem;
   --font-size-small: 1.1rem;
+  --body-dark-mode:black;
+  --header-footer-dark: #3d3d3d;
+  --background-card:rgb(232, 228, 228);
+  --background-navbar-header:#003A70;
+}
+/*Dark mode*/
+body.dark-mode{
+  background-color: var(--header-footer-dark);
+}
+nav.dark-mode {
+  /* background-color: var(--header-footer-dark); */
+}
+footer.dark-mode {
+  /* background-color: var(--header-footer-dark); */
+}
+.divide-space.dark-mode{
+  border-bottom: solid 20px var(--background-navbar-header);
+}
+#toggle-max{
+  display: none;
+}
+
+.titulo.dark-mode {
+  color: white;
+}
+.direccion.dark-mode{
+  color:white;
 }
 
 /* Estilos para el cuerpo */
@@ -17,7 +44,7 @@ body {
 }
 
 /* Estilo de los títulos */
-h1, h5 {
+h1 {
   color: #007bff;
 }
 h2 {
@@ -125,6 +152,7 @@ justify-content: space-between;
 .nav-item {
   border-radius: 10px;
   margin: 0rem 0.5rem;
+  align-content: center;
 }
 nav .container-fluid div {
   font-size: 1.5rem;
@@ -290,6 +318,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 
 .card-title {
   color: #003A70;
+  font-weight: bold;
 }
 .card .card-body{
   background: rgb(232, 228, 228);
@@ -304,6 +333,87 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 .left-list{
   text-align: left;
 }
+
+/* Contenedor principal para centrar las tarjetas */
+.card-container-nosotros {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Estilo de las tarjetas */
+.card-nosotros {
+  width: 30%;
+  background-color: var(--background-card); /* Fondo gris */
+  border-radius: 15px; /* Bordes circulares */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title-nosotros {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text-nosotros {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333; /* Texto más oscuro para legibilidad */
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-card {
+  background-color: var(--background-card);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem 7rem;
+  width: 33%; 
+  min-height: 20rem;
+  box-sizing: border-box;
+}
+
+
+.team-card img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+  font-weight: bold;
+}
+
+.team-card h4 {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+  font-weight: bold;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 /* Ajuste adicional para imágenes más pequeñas en pantallas móviles */
 @media (max-width: 768px) {
   .carousel-item img {
@@ -384,6 +494,24 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   .left-list{
     list-style: none;
     text-align: center;
+  }
+  #toggle-nav{
+    display: none;
+  }
+  #navbar-toggle{
+    display: flex;
+  }
+  #toggle-max{
+    display: block;
+  }
+  .card-container-nosotros{
+    flex-direction: column;
+  }
+  .card-nosotros{
+    width: 90%;
+  }
+  .button-carrusel{
+    font-size: 1rem;
   }
 }
 
