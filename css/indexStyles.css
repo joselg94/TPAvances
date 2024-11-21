@@ -413,6 +413,12 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   color: #666;
   line-height: 1.5;
 }
+.turno{
+  max-width: 50%;
+}
+#turnoForm{
+  background-color: var(--background-card);
+}
 
 /* Ajuste adicional para imágenes más pequeñas en pantallas móviles */
 @media (max-width: 768px) {
