@@ -83,29 +83,49 @@ darkModeSwitch1.addEventListener('change', () => {
     }
 });
 
-let fecha;
-document.getElementById('fechaTurno').addEventListener('change', function () {
-    const input = this.value; // Captura el valor del input (formato YYYY-MM-DD)
-    const [year, month, day] = input.split('-'); // Divide el valor por guiones
-    fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
-});
-const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
-const modalBody = document.querySelector('.modal-body');
-// Escuchar el clic en el botón de agendar turno
-agendarButton.addEventListener('click', () => {
-  // Capturar los valores de los campos del formulario
-  const nombre = document.getElementById('nombreCliente').value;
-  const correo = document.getElementById('correoCliente').value;
-  const telefono = document.getElementById('telefonoCliente').value;
-//   const fecha = document.getElementById('fechaTurno').value;
+if(window.location.pathname === '/turnos.html'){
+    let fecha;
+    document.getElementById('fechaTurno').addEventListener('change', function () {
+        const input = this.value; // Captura el valor del input (formato YYYY-MM-DD)
+        const [year, month, day] = input.split('-'); // Divide el valor por guiones
+        fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
+    });
+    const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
+    const modalBody = document.querySelector('.modal-body');
+    // Escuchar el clic en el botón de agendar turno
+    agendarButton.addEventListener('click', () => {
+      // Capturar los valores de los campos del formulario
+      const nombre = document.getElementById('nombreCliente').value;
+      const correo = document.getElementById('correoCliente').value;
+      const telefono = document.getElementById('telefonoCliente').value;
+    //   const fecha = document.getElementById('fechaTurno').value;
+    
+      // Verificar que los campos no estén vacíos antes de continuar
+      if (nombre && correo && telefono && fecha) {
+        // Personalizar el mensaje en el modal
+        modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
+      } else {
+        // Mensaje de validación en caso de campos vacíos (opcional)
+        modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
+      }
+    });
 
-  // Verificar que los campos no estén vacíos antes de continuar
-  if (nombre && correo && telefono && fecha) {
-    // Personalizar el mensaje en el modal
-    modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
-  } else {
-    // Mensaje de validación en caso de campos vacíos (opcional)
-    modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
-  }
-});
+    document.addEventListener('DOMContentLoaded', () => {
+        const fechaInput = document.getElementById('fechaTurno');
+        
+        // Obtener la fecha actual en formato YYYY-MM-DD
+        const hoy = new Date();
+        const anio = hoy.getFullYear();
+        const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Mes en formato 2 dígitos
+        const dia = String(hoy.getDate()).padStart(2, '0'); // Día en formato 2 dígitos
+        
+        const fechaMinima = `${anio}-${mes}-${dia}`;
+        
+        // Establecer el valor mínimo en el input
+        fechaInput.setAttribute('min', fechaMinima);
+      });
+}
 
+
+
+  

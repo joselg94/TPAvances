@@ -1,4 +1,4 @@
-const checkboxes = document.querySelectorAll('.form-check-input');
+const checkboxes = document.querySelectorAll('.form-check-input1');
 const totalBudgetDisplay = document.getElementById('totalBudget');
 const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
@@ -8,50 +8,50 @@ const maintenanceSummary = document.getElementById('maintenance-summary');
 const repairSummary = document.getElementById('repair-summary');
 
 function updateSummary() {
-  let total = 0;
 
-  // Limpiar las listas del resumen
-  diagnosticSummary.innerHTML = '';
-  maintenanceSummary.innerHTML = '';
-  repairSummary.innerHTML = '';
+    let total = 0;
+    // Limpiar las listas del resumen
+    diagnosticSummary.innerHTML = '';
+    maintenanceSummary.innerHTML = '';
+    repairSummary.innerHTML = '';
 
-  checkboxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      const label = document.querySelector(`label[for="${checkbox.id}"]`);
-      const item = document.createElement('li');
-      item.classList.add('summary-item');
+    checkboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+        const label = document.querySelector(`label[for="${checkbox.id}"]`);
+        const item = document.createElement('li');
+        item.classList.add('summary-item');
 
-      // Texto del servicio
-      const text = document.createElement('span');
-      text.textContent = label.textContent;
+        // Texto del servicio
+        const text = document.createElement('span');
+        text.textContent = label.textContent;
 
-      // Botón de eliminar
-      const deleteButton = document.createElement('button');
-      deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
-      deleteButton.classList.add('delete-btn');
-      deleteButton.addEventListener('click', () => {
-        checkbox.checked = false; // Desmarcar el checkbox
-        updateSummary(); // Actualizar el resumen
-      });
+        // Botón de eliminar
+        const deleteButton = document.createElement('button');
+        deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteButton.classList.add('delete-btn');
+        deleteButton.addEventListener('click', () => {
+            checkbox.checked = false; // Desmarcar el checkbox
+            updateSummary(); // Actualizar el resumen
+        });
 
-      // Agregar texto y botón al ítem
-      item.appendChild(text);
-      item.appendChild(deleteButton);
+        // Agregar texto y botón al ítem
+        item.appendChild(text);
+        item.appendChild(deleteButton);
 
-      // Clasificar el ítem en la categoría correspondiente
-      if (checkbox.id.startsWith('diagnostic'))
-        diagnosticSummary.appendChild(item);
-      else if (checkbox.id.startsWith('maintenance'))
-        maintenanceSummary.appendChild(item);
-      else if (checkbox.id.startsWith('repair'))
-        repairSummary.appendChild(item);
+        // Clasificar el ítem en la categoría correspondiente
+        if (checkbox.id.startsWith('diagnostic'))
+            diagnosticSummary.appendChild(item);
+        else if (checkbox.id.startsWith('maintenance'))
+            maintenanceSummary.appendChild(item);
+        else if (checkbox.id.startsWith('repair'))
+            repairSummary.appendChild(item);
 
-      total += parseInt(checkbox.value, 10);
-    }
-  });
+        total += parseInt(checkbox.value, 10);
+        }
+    });
 
-  // Actualizar el presupuesto total
-  totalBudgetDisplay.textContent = total.toLocaleString('es-AR');
+    // Actualizar el presupuesto total
+    totalBudgetDisplay.textContent = total.toLocaleString('es-AR');
 }
 
 // Vincular eventos a los checkboxes
