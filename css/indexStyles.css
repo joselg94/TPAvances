@@ -74,7 +74,7 @@ h2 {
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.019);
 }
 #section-description{
   text-align: justify;
