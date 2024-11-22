@@ -84,15 +84,54 @@
             <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
             <input type="date" class="form-control" id="fechaTurno" required>
         </div>
-        <button id="btn-turno" type="button" class="btn w-100" data-bs-toggle="modal" data-bs-target="#confirmacionModal">
-            Agendar Turno
+        <button type="button" class="btn btn-primary w-100" id="showModalButton">
+            Reservar Turno
         </button>
     </form>
 </div>
 
 
   <!-- Modal -->
-  <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div
+  class="modal fade"
+  id="confirmationModal"
+  tabindex="-1"
+  aria-labelledby="confirmationModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5
+          class="modal-title"
+          id="confirmationModalLabel"
+        >
+          ¿Reservar Turno?
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="modal-body">
+        Tu presupuesto está listo. ¿Deseas reservar un turno para estos
+        servicios?
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="bookAppointment"
+        >
+          Reservar Turno
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -107,7 +146,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <button
   id="scrollToTop"
   class="scroll-to-top">
@@ -148,6 +187,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="js/calculadora-script.js"></script> -->
     <script src="index.js?v=1.0"></script>
 
 </body>

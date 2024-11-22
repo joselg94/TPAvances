@@ -93,7 +93,31 @@ if(window.location.pathname === '/turnos.html'){
     const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
     const modalBody = document.querySelector('.modal-body');
     // Escuchar el clic en el botón de agendar turno
-    agendarButton.addEventListener('click', (e) => {
+    // agendarButton.addEventListener('click', (e) => {
+    //     console.log("antes del prevent")
+    //     e.preventDefault();
+    //     console.log("despues del prevent")
+    //     // Capturar los valores de los campos del formulario
+    //     const nombre = document.getElementById('nombreCliente').value;
+    //     const correo = document.getElementById('correoCliente').value;
+    //     const telefono = document.getElementById('telefonoCliente').value;
+    //     //   const fecha = document.getElementById('fechaTurno').value;
+    
+    //   // Verificar que los campos no estén vacíos antes de continuar
+    //   if (nombre && correo && telefono && fecha) {
+    //     // Personalizar el mensaje en el modal
+    //     modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
+    //   } else {
+    //     // Mensaje de validación en caso de campos vacíos (opcional)
+    //     modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
+    //   }
+    // });
+    const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+
+    console.log("carga inicial", document.getElementById("showModalButton"))
+    document.getElementById('showModalButton').addEventListener('click', (e) => {
+        e.preventDefault();
+        
         console.log("antes del prevent")
         e.preventDefault();
         console.log("despues del prevent")
@@ -103,16 +127,23 @@ if(window.location.pathname === '/turnos.html'){
         const telefono = document.getElementById('telefonoCliente').value;
         //   const fecha = document.getElementById('fechaTurno').value;
     
-      // Verificar que los campos no estén vacíos antes de continuar
-      if (nombre && correo && telefono && fecha) {
+        // Verificar que los campos no estén vacíos antes de continuar
+        if (nombre && correo && telefono && fecha) {
         // Personalizar el mensaje en el modal
         modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
-      } else {
+        } else {
         // Mensaje de validación en caso de campos vacíos (opcional)
         modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
-      }
+        }
+      
+        modal.show();
     });
-
+    document.querySelector('.btn-close').addEventListener('click', () => {
+        modal.hide();
+    });
+    document.getElementById('bookAppointment').addEventListener('click', () => {
+        modal.hide();
+    });
     document.addEventListener('DOMContentLoaded', () => {
         console.log("carga de fecha inicial")
         const fechaInput = document.getElementById('fechaTurno');
