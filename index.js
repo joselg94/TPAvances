@@ -90,28 +90,9 @@ if(window.location.pathname === '/turnos.html'){
         const [year, month, day] = input.split('-'); // Divide el valor por guiones
         fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
     });
-    const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
+
     const modalBody = document.querySelector('.modal-body');
-    // Escuchar el clic en el botón de agendar turno
-    // agendarButton.addEventListener('click', (e) => {
-    //     console.log("antes del prevent")
-    //     e.preventDefault();
-    //     console.log("despues del prevent")
-    //     // Capturar los valores de los campos del formulario
-    //     const nombre = document.getElementById('nombreCliente').value;
-    //     const correo = document.getElementById('correoCliente').value;
-    //     const telefono = document.getElementById('telefonoCliente').value;
-    //     //   const fecha = document.getElementById('fechaTurno').value;
-    
-    //   // Verificar que los campos no estén vacíos antes de continuar
-    //   if (nombre && correo && telefono && fecha) {
-    //     // Personalizar el mensaje en el modal
-    //     modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
-    //   } else {
-    //     // Mensaje de validación en caso de campos vacíos (opcional)
-    //     modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
-    //   }
-    // });
+
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
     console.log("carga inicial", document.getElementById("showModalButton"))
