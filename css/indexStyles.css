@@ -451,6 +451,10 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   background-color: var(--background-navbar-header);
   color: white;
 }
+#btn-turno {
+  background-color: var(--background-navbar-header);
+  color: white;
+}
 /* Ajuste adicional para imágenes más pequeñas en pantallas móviles */
 @media (max-width: 768px) {
   .carousel-item img {

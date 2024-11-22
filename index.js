@@ -83,11 +83,6 @@ darkModeSwitch1.addEventListener('change', () => {
     }
 });
 
-document.querySelector('button').addEventListener('click', function (e) {
-    e.preventDefault(); // Detiene el comportamiento por defecto
-    console.log('Botón presionado');
-});
-
 if(window.location.pathname === '/turnos.html'){
     let fecha;
     document.getElementById('fechaTurno').addEventListener('change', function () {
@@ -95,14 +90,12 @@ if(window.location.pathname === '/turnos.html'){
         const [year, month, day] = input.split('-'); // Divide el valor por guiones
         fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
     });
-    const agendarButton = document.getElementById('showModalButton');
+    const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
     const modalBody = document.querySelector('.modal-body');
-    const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
-        console.log("llegue aca bien antes del prevent")
-        e.preventDefault(); // Detiene el comportamiento por defecto
-        console.log("llegue aca bien despues prevent")
+        e.preventDefault(); // Evitar el envío del formulario por defecto
+
         // Capturar los valores de los campos del formulario
         const nombre = document.getElementById('nombreCliente').value;
         const correo = document.getElementById('correoCliente').value;
@@ -118,6 +111,7 @@ if(window.location.pathname === '/turnos.html'){
         // Validaciones
         let valid = true;
 
+        // Validar nombre: solo letras
         if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
             nombreError.classList.remove('d-none');
             valid = false;
@@ -152,15 +146,10 @@ if(window.location.pathname === '/turnos.html'){
         // Mostrar el mensaje en el modal si todo es válido
         if (valid) {
             modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno para el ${fecha} fue agendado correctamente.`;
-            document.getElementById('nombreCliente').value = '';
-            document.getElementById('correoCliente').value = '';
-            document.getElementById('telefonoCliente').value = '';
-            document.getElementById('fechaTurno').value = '';
         } else {
             modalBody.textContent = `Por favor, complete todos los campos correctamente antes de agendar el turno.`;
         }
     });
-
 
     document.addEventListener('DOMContentLoaded', () => {
         const fechaInput = document.getElementById('fechaTurno');
@@ -176,14 +165,6 @@ if(window.location.pathname === '/turnos.html'){
         // Establecer el valor mínimo en el input
         fechaInput.setAttribute('min', fechaMinima);
       });
-
-      document.getElementById('showModalButton').addEventListener('click', () => {
-        modal.show();
-      });
-      document.getElementById('bookAppointment').addEventListener('click', () => {
-        modal.hide();
-      });
-      
 }
 
 // Mostrar el botón de scroll al inicio
