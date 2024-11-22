@@ -95,8 +95,9 @@ if(window.location.pathname === '/turnos.html'){
         const [year, month, day] = input.split('-'); // Divide el valor por guiones
         fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
     });
-    const agendarButton = document.getElementById('btn-turno');
+    const agendarButton = document.getElementById('showModalButton');
     const modalBody = document.querySelector('.modal-body');
+    const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
         console.log("llegue aca bien antes del prevent")
@@ -175,6 +176,14 @@ if(window.location.pathname === '/turnos.html'){
         // Establecer el valor mínimo en el input
         fechaInput.setAttribute('min', fechaMinima);
       });
+
+      document.getElementById('showModalButton').addEventListener('click', () => {
+        modal.show();
+      });
+      document.getElementById('bookAppointment').addEventListener('click', () => {
+        modal.hide();
+      });
+      
 }
 
 // Mostrar el botón de scroll al inicio

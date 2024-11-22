@@ -443,7 +443,11 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   font-size: 20px;
 }
 
-#btn-turno {
+#showModalButton {
+  background-color: var(--background-navbar-header);
+  color: white;
+}
+#bookAppointment{
   background-color: var(--background-navbar-header);
   color: white;
 }
