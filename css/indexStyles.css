@@ -115,7 +115,7 @@ width: 7%;
 
 .shadow.card-Taller{
 background-color: rgb(232, 228, 228);
-margin: 2rem;
+margin: 0rem 2rem;
 }
 
 .footer-content {
@@ -224,7 +224,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 .carousel-inner img {
   width: 100%; /* Abarca todo el ancho del contenedor */
   max-height: 70vh; /* Limita la altura al 50% del viewport */
-  height: auto; /* Ajusta la altura para evitar deformación */
+  height: 90rem; /* Ajusta la altura para evitar deformación */
   object-fit: fill; /* Estira la imagen para llenar el contenedor */
 }
 .card-Taller {
@@ -255,6 +255,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 .card-Taller .card-text {
   margin-top: 0.5rem; /* Añade un pequeño espacio superior */
 }
+
 #location {
   padding: 0rem 2rem 2rem 2rem;
 }
@@ -458,7 +459,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 /* Ajuste adicional para imágenes más pequeñas en pantallas móviles */
 @media (max-width: 768px) {
   .carousel-item img {
-    max-height: 300px; /* Reduce la altura máxima en pantallas pequeñas */
+    height: 250px; /* Reduce la altura máxima en pantallas pequeñas */
   }
 }
 
@@ -468,12 +469,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
     margin-bottom: 20px;
   }
 }
-@media (max-width: 680px) {
-  .form{
-      padding: 5%;
-  }
-  
-}
+
 @media (max-width: 680px) {
   .form{
       padding: 5%;
@@ -511,8 +507,8 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   }
 
   .card-Taller .card-body {
-    font-size: 0.8rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
-    line-height: 1.3; /* Ajusta el espaciado en pantallas pequeñas */
+    /* font-size: 0.8rem;  */
+    line-height: 1.3; 
   }
 
   .card-Taller h5.card-title {
@@ -536,15 +532,8 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
     list-style: none;
     text-align: center;
   }
-  #toggle-nav{
-    display: none;
-  }
-  #navbar-toggle{
-    display: flex;
-  }
-  #toggle-max{
-    display: block;
-  }
+  
+
   .card-container-nosotros{
     flex-direction: column;
   }
@@ -560,6 +549,20 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   }
   .turno{
     max-width: 90%;
+  }
+  p.card-text{
+    font-size: var(--font-size-small);
+  }
+}
+@media (max-width:990px) {
+  #toggle-max{
+    display: block;
+  }
+  #navbar-toggle{
+    display: flex;
+  }
+  #toggle-nav{
+    display: none;
   }
 }
 
