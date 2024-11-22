@@ -118,14 +118,29 @@ if(window.location.pathname === '/calculadora.html'){
   document.getElementById('bookAppointment').addEventListener('click', () => {
     window.location.href = 'turnos.html';
   });
-}else{
+}else if(window.location.pathname === '/turnos.html'){
   // Mostrar el modal solo si no se seleccionaron servicios
   let fecha;
-    document.getElementById('fechaTurno').addEventListener('change', function () {
-        const input = this.value; // Captura el valor del input (formato YYYY-MM-DD)
-        const [year, month, day] = input.split('-'); // Divide el valor por guiones
-        fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
-    });
+  document.getElementById('fechaTurno').addEventListener('change', function () {
+      const input = this.value; // Captura el valor del input (formato YYYY-MM-DD)
+      const [year, month, day] = input.split('-'); // Divide el valor por guiones
+      fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log("carga de fecha inicial")
+    const fechaInput = document.getElementById('fechaTurno');
+    
+    // Obtener la fecha actual en formato YYYY-MM-DD
+    const hoy = new Date();
+    const anio = hoy.getFullYear();
+    const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Mes en formato 2 dígitos
+    const dia = String(hoy.getDate()).padStart(2, '0'); // Día en formato 2 dígitos
+    
+    const fechaMinima = `${anio}-${mes}-${dia}`;
+    
+    // Establecer el valor mínimo en el input
+    fechaInput.setAttribute('min', fechaMinima);
+  });
   const modalBody = document.querySelector('.modal-body');
   document.getElementById('showModalButton').addEventListener('click', () => {
     console.log("antes del prevent")
