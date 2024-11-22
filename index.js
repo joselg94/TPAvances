@@ -94,8 +94,9 @@ if(window.location.pathname === '/turnos.html'){
     const modalBody = document.querySelector('.modal-body');
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
+        console.log("llegue aca bien antes del prevent")
         e.preventDefault(); // Detiene el comportamiento por defecto
-
+        console.log("llegue aca bien despues prevent")
         // Capturar los valores de los campos del formulario
         const nombre = document.getElementById('nombreCliente').value;
         const correo = document.getElementById('correoCliente').value;
