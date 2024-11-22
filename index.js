@@ -94,7 +94,7 @@ if(window.location.pathname === '/turnos.html'){
     const modalBody = document.querySelector('.modal-body');
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Detiene el comportamiento por defecto
 
         // Capturar los valores de los campos del formulario
         const nombre = document.getElementById('nombreCliente').value;
@@ -146,11 +146,10 @@ if(window.location.pathname === '/turnos.html'){
         // Mostrar el mensaje en el modal si todo es válido
         if (valid) {
             modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno para el ${fecha} fue agendado correctamente.`;
-            let button = document.getElementById('success-btn');
-            document.getElementById('nombreCliente').value = '';
-            document.getElementById('correoCliente').value = '';
-            document.getElementById('telefonoCliente').value = '';
-            document.getElementById('fechaTurno').value = '';
+            // document.getElementById('nombreCliente').value = '';
+            // document.getElementById('correoCliente').value = '';
+            // document.getElementById('telefonoCliente').value = '';
+            // document.getElementById('fechaTurno').value = '';
         } else {
             modalBody.textContent = `Por favor, complete todos los campos correctamente antes de agendar el turno.`;
         }
