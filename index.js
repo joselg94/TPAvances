@@ -90,7 +90,7 @@ if(window.location.pathname === '/turnos.html'){
         const [year, month, day] = input.split('-'); // Divide el valor por guiones
         fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
     });
-    const agendarButton = document.querySelector('button[data-bs-toggle="modal"]');
+    const agendarButton = document.getElementById('btn-turno');
     const modalBody = document.querySelector('.modal-body');
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
@@ -146,19 +146,16 @@ if(window.location.pathname === '/turnos.html'){
         // Mostrar el mensaje en el modal si todo es válido
         if (valid) {
             modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno para el ${fecha} fue agendado correctamente.`;
+            let button = document.getElementById('success-btn');
+            document.getElementById('nombreCliente').value = '';
+            document.getElementById('correoCliente').value = '';
+            document.getElementById('telefonoCliente').value = '';
+            document.getElementById('fechaTurno').value = '';
         } else {
             modalBody.textContent = `Por favor, complete todos los campos correctamente antes de agendar el turno.`;
         }
     });
 
-    let button = document.getElementById('success-btn');
-    button.addEventListener('click', (e) =>{
-        document.getElementById('nombreCliente').value = '';
-        document.getElementById('correoCliente').value = '';
-        document.getElementById('telefonoCliente').value = '';
-        document.getElementById('fechaTurno').value = '';
-
-    })
 
     document.addEventListener('DOMContentLoaded', () => {
         const fechaInput = document.getElementById('fechaTurno');
