@@ -74,94 +74,120 @@
   </div>
 </nav>
 
-  <div class="container mt-5 turno">
-    <h2 class="text-center mb-4 titulo">AGENDAR TURNO</h2>
-    <form id="turnoForm" action="#" class="p-4 rounded shadow-sm end" novalidate>
-        <div class="mb-3">
-            <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
-            <input type="text" class="form-control" id="nombreCliente" placeholder="Escribe tu nombre" required>
-            <small id="nombreError" class="text-danger d-none">El nombre solo puede contener letras.</small>
-        </div>
+<!-- Contenedor principal -->
+<div class="container mt-5 turno">
+  <h2 class="text-center mb-4 titulo">AGENDAR TURNO</h2>
+  <form id="turnoForm" action="#" class="p-4 rounded shadow-sm end" novalidate>
+      <div class="mb-3">
+          <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+          <input type="text" class="form-control" id="nombreCliente" placeholder="Escribe tu nombre" required>
+          <small id="nombreError" class="text-danger d-none">El nombre solo puede contener letras.</small>
+      </div>
 
-        <div class="mb-3">
-            <label for="correoCliente" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="correoCliente" placeholder="ejemplo@correo.com" required>
-            <small id="correoError" class="text-danger d-none">Ingrese un correo electrónico válido.</small>
-        </div>
+      <div class="mb-3">
+          <label for="correoCliente" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="correoCliente" placeholder="ejemplo@correo.com" required>
+          <small id="correoError" class="text-danger d-none">Ingrese un correo electrónico válido.</small>
+      </div>
 
-        <div class="mb-3">
-            <label for="telefonoCliente" class="form-label">Número de Teléfono</label>
-            <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingrese su número de teléfono" required>
-            <small id="telefonoError" class="text-danger d-none">El teléfono solo puede contener números.</small>
-        </div>
+      <div class="mb-3">
+          <label for="telefonoCliente" class="form-label">Número de Teléfono</label>
+          <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingrese su número de teléfono" required>
+          <small id="telefonoError" class="text-danger d-none">El teléfono solo puede contener números.</small>
+      </div>
 
-        <div class="mb-3">
-            <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
-            <input type="date" class="form-control" id="fechaTurno" required>
-        </div>
-        <button type="button" class="btn btn-primary w-100" id="showModalButton">
-            Reservar Turno
-        </button>
-    </form>
+      <div class="mb-3">
+          <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
+          <input type="date" class="form-control" id="fechaTurno" required>
+      </div>
+      <button type="button" class="btn btn-primary w-100" id="showModalButton">
+          Reservar Turno
+      </button>
+  </form>
 </div>
 
-
-  <!-- Modal -->
-  <div
-  class="modal fade"
-  id="confirmationModal"
-  tabindex="-1"
-  aria-labelledby="confirmationModalLabel"
-  aria-hidden="true"
->
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5
-          class="modal-title"
-          id="confirmationModalLabel"
-        >
-          ¿Reservar Turno?
-        </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Cerrar"
-        ></button>
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="confirmationModalLabel">¿Reservar Turno?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+              Tu presupuesto está listo. ¿Deseas reservar un turno para estos servicios?
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="bookAppointment">Reservar Turno</button>
+          </div>
       </div>
-      <div class="modal-body">
-        Tu presupuesto está listo. ¿Deseas reservar un turno para estos
-        servicios?
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-primary"
-          id="bookAppointment"
-        >
-          Reservar Turno
-        </button>
-      </div>
-    </div>
   </div>
 </div>
-  <!-- <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalLabel">Confirmación</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          ¡Turno agendado correctamente!
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Aceptar</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
+
+<!-- Bootstrap JS (con Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+<!-- JavaScript personalizado -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Establecer la fecha mínima en el input
+      const fechaInput = document.getElementById('fechaTurno');
+      
+      // Obtener la fecha actual en formato YYYY-MM-DD
+      const hoy = new Date();
+      const anio = hoy.getFullYear();
+      const mes = String(hoy.getMonth() + 1).padStart(2, '0'); // Mes en formato 2 dígitos
+      const dia = String(hoy.getDate()).padStart(2, '0'); // Día en formato 2 dígitos
+      
+      const fechaMinima = `${anio}-${mes}-${dia}`;
+      
+      // Establecer el valor mínimo en el input
+      fechaInput.setAttribute('min', fechaMinima);
+  });
+
+  let fecha;
+  // Evento de cambio de fecha
+  document.getElementById('fechaTurno').addEventListener('change', function () {
+      const input = this.value; // Captura el valor del input (formato YYYY-MM-DD)
+      const [year, month, day] = input.split('-'); // Divide el valor por guiones
+      fecha = `${day}/${month}/${year}`; // Reformatea el valor al formato DD/MM/YYYY
+  });
+
+  const modalBody = document.querySelector('.modal-body');
+  const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
+
+  // Evento de clic en "Reservar Turno"
+  document.getElementById('showModalButton').addEventListener('click', () => {
+      // Capturar los valores de los campos del formulario
+      const nombre = document.getElementById('nombreCliente').value;
+      const correo = document.getElementById('correoCliente').value;
+      const telefono = document.getElementById('telefonoCliente').value;
+
+      // Verificar que los campos no estén vacíos antes de continuar
+      if (nombre && correo && telefono && fecha) {
+          // Personalizar el mensaje en el modal
+          modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
+      } else {
+          // Mensaje de validación en caso de campos vacíos (opcional)
+          modalBody.textContent = `Por favor, complete todos los campos antes de agendar el turno.`;
+      }
+      
+      // Mostrar el modal
+      modal.show();
+  });
+
+  // Evento de cierre del modal
+  document.querySelector('.btn-close').addEventListener('click', () => {
+      modal.hide();
+  });
+
+  // Evento de clic en "Reservar Turno" dentro del modal
+  document.getElementById('bookAppointment').addEventListener('click', () => {
+      modal.hide();
+  });
+</script>
+
   <button
   id="scrollToTop"
   class="scroll-to-top">
@@ -203,7 +229,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- <script src="js/calculadora-script.js"></script> -->
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
 
 </body>
 </html>
