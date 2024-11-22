@@ -94,12 +94,12 @@ if(window.location.pathname === '/turnos.html'){
     const modalBody = document.querySelector('.modal-body');
     // Escuchar el clic en el botón de agendar turno
     agendarButton.addEventListener('click', (e) => {
-        e.preventDefault(); // Evitar el envío del formulario por defecto
-      // Capturar los valores de los campos del formulario
-      const nombre = document.getElementById('nombreCliente').value;
-      const correo = document.getElementById('correoCliente').value;
-      const telefono = document.getElementById('telefonoCliente').value;
-    //   const fecha = document.getElementById('fechaTurno').value;
+        e.preventDefault();
+        // Capturar los valores de los campos del formulario
+        const nombre = document.getElementById('nombreCliente').value;
+        const correo = document.getElementById('correoCliente').value;
+        const telefono = document.getElementById('telefonoCliente').value;
+        //   const fecha = document.getElementById('fechaTurno').value;
     
       // Verificar que los campos no estén vacíos antes de continuar
       if (nombre && correo && telefono && fecha) {

@@ -59,36 +59,35 @@
   </div>
 </nav>
 
-<div class="container mt-5 turno">
-  <h2 class="text-center mb-4 titulo">AGENDAR TURNO</h2>
-  <form id="turnoForm" class="p-4 rounded shadow-sm end" novalidate>
-      <div class="mb-3">
-          <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
-          <input type="text" class="form-control" id="nombreCliente" placeholder="Escribe tu nombre" required>
-          <small id="nombreError" class="text-danger d-none">El nombre solo puede contener letras.</small>
-      </div>
+  <div class="container mt-5 turno">
+    <h2 class="text-center mb-4 titulo">AGENDAR TURNO</h2>
+    <form id="turnoForm" class="p-4 rounded shadow-sm end" novalidate>
+        <div class="mb-3">
+            <label for="nombreCliente" class="form-label">Nombre del Cliente</label>
+            <input type="text" class="form-control" id="nombreCliente" placeholder="Escribe tu nombre" required>
+            <small id="nombreError" class="text-danger d-none">El nombre solo puede contener letras.</small>
+        </div>
 
-      <div class="mb-3">
-          <label for="correoCliente" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="correoCliente" placeholder="ejemplo@correo.com" required>
-          <small id="correoError" class="text-danger d-none">Ingrese un correo electrónico válido.</small>
-      </div>
+        <div class="mb-3">
+            <label for="correoCliente" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correoCliente" placeholder="ejemplo@correo.com" required>
+            <small id="correoError" class="text-danger d-none">Ingrese un correo electrónico válido.</small>
+        </div>
 
-      <div class="mb-3">
-          <label for="telefonoCliente" class="form-label">Número de Teléfono</label>
-          <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingrese su número de teléfono" required>
-          <small id="telefonoError" class="text-danger d-none">El teléfono solo puede contener números.</small>
-      </div>
+        <div class="mb-3">
+            <label for="telefonoCliente" class="form-label">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="telefonoCliente" placeholder="Ingrese su número de teléfono" required>
+            <small id="telefonoError" class="text-danger d-none">El teléfono solo puede contener números.</small>
+        </div>
 
-      <div class="mb-3">
-          <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
-          <input type="date" class="form-control" id="fechaTurno" required>
-          <small id="fechaError" class="text-danger d-none">Por favor,Ingrese una fecha.</small>
-      </div>
-      <button id="btn-turno" class="btn w-100" data-bs-toggle="modal" data-bs-target="#confirmacionModal">
-          Agendar Turno
-      </button>
-  </form>
+        <div class="mb-3">
+            <label for="fechaTurno" class="form-label">Seleccione Fecha</label>
+            <input type="date" class="form-control" id="fechaTurno" required>
+        </div>
+        <button id="btn-turno" class="btn w-100" data-bs-toggle="modal" data-bs-target="#confirmacionModal">
+            Agendar Turno
+        </button>
+    </form>
 </div>
 
 
