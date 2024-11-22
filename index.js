@@ -115,12 +115,8 @@ if(window.location.pathname === '/turnos.html'){
     const modal = new bootstrap.Modal(document.getElementById('confirmationModal'));
 
     console.log("carga inicial", document.getElementById("showModalButton"))
-    document.getElementById('showModalButton').addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        console.log("antes del prevent")
-        e.preventDefault();
-        console.log("despues del prevent")
+    document.getElementById('showModalButton').addEventListener('click', () => {
+
         // Capturar los valores de los campos del formulario
         const nombre = document.getElementById('nombreCliente').value;
         const correo = document.getElementById('correoCliente').value;
