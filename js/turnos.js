@@ -43,6 +43,42 @@ function validarCorreo(correo) {
     return regex.test(correo);
 }
 
+// Validación dinámica en los campos
+document.getElementById('nombreCliente').addEventListener('input', function () {
+    const nombreError = document.getElementById('nombreError');
+    if (validarNombre(this.value)) {
+        nombreError.style.display = 'none';
+    } else {
+        nombreError.style.display = 'block';
+    }
+});
+
+document.getElementById('correoCliente').addEventListener('input', function () {
+    const correoError = document.getElementById('correoError');
+    if (validarCorreo(this.value)) {
+        correoError.style.display = 'none';
+    } else {
+        correoError.style.display = 'block';
+    }
+});
+
+document.getElementById('telefonoCliente').addEventListener('input', function () {
+    const telefonoError = document.getElementById('telefonoError');
+    if (validarTelefono(this.value)) {
+        telefonoError.style.display = 'none';
+    } else {
+        telefonoError.style.display = 'block';
+    }
+});
+
+document.getElementById('fechaTurno').addEventListener('change', function () {
+    const fechaError = document.getElementById('fechaError');
+    if (this.value) {
+        fechaError.style.display = 'none';
+    } else {
+        fechaError.style.display = 'block';
+    }
+});
 // Validación de formulario
 document.getElementById('showModalButton').addEventListener('click', function () {
     // Resetear los mensajes de error
@@ -81,7 +117,7 @@ document.getElementById('showModalButton').addEventListener('click', function ()
 
     // Si el formulario es válido, mostrar el modal
     if (formIsValid) {
-        modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno agendado para el ${fecha} fue agendado correctamente.`;
+        modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno para la fecha ${fecha} fue agendado correctamente.`;
         modal.show();
     }
 });
