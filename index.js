@@ -83,6 +83,11 @@ darkModeSwitch1.addEventListener('change', () => {
     }
 });
 
+document.querySelector('button').addEventListener('click', function (e) {
+    e.preventDefault(); // Detiene el comportamiento por defecto
+    console.log('Botón presionado');
+});
+
 if(window.location.pathname === '/turnos.html'){
     let fecha;
     document.getElementById('fechaTurno').addEventListener('change', function () {
@@ -104,53 +109,52 @@ if(window.location.pathname === '/turnos.html'){
         const fechaInput = document.getElementById('fechaTurno').value;
 
         // Referencias a los elementos de error
-        // const nombreError = document.getElementById('nombreError');
-        // const correoError = document.getElementById('correoError');
-        // const telefonoError = document.getElementById('telefonoError');
-        // const fechaError = document.getElementById('fechaError');
+        const nombreError = document.getElementById('nombreError');
+        const correoError = document.getElementById('correoError');
+        const telefonoError = document.getElementById('telefonoError');
+        const fechaError = document.getElementById('fechaError');
 
         // Validaciones
         let valid = true;
 
-        // Validar nombre: solo letras
-        // if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
-        //     nombreError.classList.remove('d-none');
-        //     valid = false;
-        // } else {
-        //     nombreError.classList.add('d-none');
-        // }
+        if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
+            nombreError.classList.remove('d-none');
+            valid = false;
+        } else {
+            nombreError.classList.add('d-none');
+        }
 
-        // // Validar correo: formato de correo electrónico
-        // if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
-        //     correoError.classList.remove('d-none');
-        //     valid = false;
-        // } else {
-        //     correoError.classList.add('d-none');
-        // }
+        // Validar correo: formato de correo electrónico
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+            correoError.classList.remove('d-none');
+            valid = false;
+        } else {
+            correoError.classList.add('d-none');
+        }
 
-        // // Validar teléfono: solo números
-        // if (!/^\d+$/.test(telefono)) {
-        //     telefonoError.classList.remove('d-none');
-        //     valid = false;
-        // } else {
-        //     telefonoError.classList.add('d-none');
-        // }
+        // Validar teléfono: solo números
+        if (!/^\d+$/.test(telefono)) {
+            telefonoError.classList.remove('d-none');
+            valid = false;
+        } else {
+            telefonoError.classList.add('d-none');
+        }
 
-        // // Validar fecha: campo no vacío
-        // if (!fechaInput) {
-        //     fechaError.classList.remove('d-none');
-        //     valid = false;
-        // } else {
-        //     fechaError.classList.add('d-none');
-        // }
+        // Validar fecha: campo no vacío
+        if (!fechaInput) {
+            fechaError.classList.remove('d-none');
+            valid = false;
+        } else {
+            fechaError.classList.add('d-none');
+        }
 
         // Mostrar el mensaje en el modal si todo es válido
         if (valid) {
             modalBody.textContent = `¡Felicitaciones ${nombre}! Su turno para el ${fecha} fue agendado correctamente.`;
-            // document.getElementById('nombreCliente').value = '';
-            // document.getElementById('correoCliente').value = '';
-            // document.getElementById('telefonoCliente').value = '';
-            // document.getElementById('fechaTurno').value = '';
+            document.getElementById('nombreCliente').value = '';
+            document.getElementById('correoCliente').value = '';
+            document.getElementById('telefonoCliente').value = '';
+            document.getElementById('fechaTurno').value = '';
         } else {
             modalBody.textContent = `Por favor, complete todos los campos correctamente antes de agendar el turno.`;
         }
