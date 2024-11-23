@@ -253,6 +253,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   margin-bottom: 1rem; 
   text-align: center; 
 }
+.card-nosotros h5.card-title{
+  font-size: var(--font-size-medium);
+}
 .card-body h5.card-title{
   font-size: var(--font-size-medium);
 }
@@ -333,6 +336,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
 .card .card-body{
   background: rgb(232, 228, 228);
   padding: 2rem;
+  border-radius: 10px;
 }
 .card .image {
   height: 20rem;
@@ -389,7 +393,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 1rem 7rem;
+  padding: 1rem 5rem;
   width: 33%; 
   min-height: 20rem;
   box-sizing: border-box;
@@ -471,12 +475,21 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
     height: 250px; /* Reduce la altura m√°xima en pantallas peque√±as */
   }
 }
+@media (max-width: 970px) {
+  .team-card{
+    padding: 1rem 1rem;
+  }
+}
 
 /* Responsive - Tarjetas ajustables */
 @media (max-width: 768px) {
   .cards-container{
-    gap: 10px;
+    gap: 20px;
   }
+  .carousel-caption{
+    padding: 0px;
+  }
+
 }
 
 @media (max-width: 680px) {
