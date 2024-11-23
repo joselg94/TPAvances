@@ -19,7 +19,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* background-color: rgb(232, 228, 228); */
+    /* justify-content: space-between; */
   }
   
   .card-header {
@@ -30,15 +31,17 @@
     border-top: 1px solid black;
   }
   
-  .card-body {
+  .card-body-calcu {
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Espacio entre los elementos */
     border-left: 1px solid black;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
-    border-radius: 0 0 var(--bs-card-inner-border-radius)
-      var(--bs-card-inner-border-radius);
+    border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
+    background: rgb(232, 228, 228);
+    padding: 2rem;
+    height: 100%;
   }
   
   .form-check {
