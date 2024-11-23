@@ -536,6 +536,9 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   .card-Taller h5.card-title {
     font-size: var(--font-size-medium);
   }
+  .card-Taller h2.card-title {
+    font-size: var(--font-size-medium);
+  }
   #card-reverse {
     flex-direction: column-reverse;
   }
