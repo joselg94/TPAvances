@@ -479,15 +479,15 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici√
   .team-card{
     padding: 1rem 1rem;
   }
+  .carousel-caption{
+    padding: 0px;
+  }
 }
 
 /* Responsive - Tarjetas ajustables */
 @media (max-width: 768px) {
   .cards-container{
     gap: 20px;
-  }
-  .carousel-caption{
-    padding: 0px;
   }
 
 }
