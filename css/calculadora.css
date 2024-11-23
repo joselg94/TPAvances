@@ -138,6 +138,9 @@
       margin-bottom: 20px;
     }
   } */
+  .space-calculadora{
+    margin: 0 0.5rem;
+  }
   
   @media (max-width: 768px) {
     /* Para pantallas pequeñas */

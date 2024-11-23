@@ -1,6 +1,8 @@
 :root {
   --font-size-large: 2rem;
   --font-size-small: 1.1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-xs: 0.75rem;
   --body-dark-mode:black;
   --header-footer-dark: #3d3d3d;
   --background-card:rgb(232, 228, 228);
@@ -35,7 +37,7 @@ html, body {
   height: 100%;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter';
   background-color: #f4f4f4;
   display: flex;
   flex-direction: column;
@@ -106,7 +108,7 @@ transition: background-color 0.3s ease; /* Transición suave para el cambio de f
 background-color: #c89a0d;  /* Fondo gris más claro */
 }
 .custom-title{
-color: #003A70; /* Cambia este código de color según lo necesites */
+  color: #003A70; /* Cambia este código de color según lo necesites */
 }
 
 .footer-image {
@@ -247,9 +249,15 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 }
 
 .card-Taller h5.card-title {
-  font-size: 1.2rem; /* Ajusta el tamaño del título */
-  margin-bottom: 1rem; /* Espaciado inferior */
-  text-align: center; /* Centra el texto */
+  font-size: var(--font-size-medium);
+  margin-bottom: 1rem; 
+  text-align: center; 
+}
+.card-body h5.card-title{
+  font-size: var(--font-size-medium);
+}
+.card-body p.card-text{
+  font-size: var(--font-size-small);
 }
 
 .card-Taller .card-text {
@@ -261,6 +269,7 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 }
 #location h5 {
   margin-bottom: 2rem;
+  font-size: var(--font-size-medium);
 }
 #history-description {
   text-align: justify;
@@ -465,8 +474,8 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
 
 /* Responsive - Tarjetas ajustables */
 @media (max-width: 768px) {
-  .card {
-    margin-bottom: 20px;
+  .cards-container{
+    gap: 10px;
   }
 }
 
@@ -507,12 +516,12 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   }
 
   .card-Taller .card-body {
-    /* font-size: 0.8rem;  */
+    
     line-height: 1.3; 
   }
 
   .card-Taller h5.card-title {
-    font-size: 1rem; /* Reduce el tamaño del título en pantallas pequeñas */
+    font-size: var(--font-size-medium);
   }
   #card-reverse {
     flex-direction: column-reverse;
@@ -553,6 +562,12 @@ transition: background-color 0.3s ease, color 0.3s ease; /* Suaviza la transici�
   }
   p.card-text{
     font-size: var(--font-size-small);
+  }
+  .carousel-caption{
+    padding: 0px;
+  }
+  .carousel-caption h5{
+    font-size: var(--font-size-xs);
   }
 }
 @media (max-width:990px) {
